@@ -3,12 +3,15 @@
     <h1>{{ message }}</h1>
     <h2>New Movie</h2>
     <div>
+    <form method="POST" action="/movies/new">
+    <label for="/movies/new"> Create New Movie </label>
     Title: <input type="text" v-model="newTitle" /> <br />
       Year: <input type="number" v-model="newYear" /><br />
       Plot: <input type="text" v-model="newPlot" /><br />
       Director: <input type="text" v-model="newDirector" /><br />
       English: <input type="checkbox" v-model="newEnglish" /><br />
       <button v-on:click="createMovie()">Create</button>
+      </form>
 </div>
 </div>
 </template>
